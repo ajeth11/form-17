@@ -1,0 +1,22 @@
+.fullpage {
+    display: flex;
+    flex-direction: column;
+    .header {
+        height: 5rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 2rem;
+    }
+    .body {
+        .img {
+            border-radius: 56rem;
+            width: 4rem;
+            height: 4rem;
+        }
+        .action {
+            display: flex;
+            flex-direction: row;
+        }
+    }
+}

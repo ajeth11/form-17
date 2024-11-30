@@ -1,0 +1,35 @@
+<div class="model">
+
+    <div class="header">
+        <h1>Profile Upload</h1>
+        <div class="example-button-container" mat-button mat-dialog-close>
+            <mat-icon>close</mat-icon>
+        </div>
+    </div>
+
+    <div class="body">
+        <div class="preview-img">
+            <h3>Preview Profile</h3>
+            <img [src]="croppedImage" width="100%" height="100%" />
+        </div>
+
+        <div class="crop-img">
+            <h3>Image Crop</h3>
+            <image-cropper [imageChangedEvent]="imageChangedEvent" [maintainAspectRatio]="true" [aspectRatio]="4 / 3"
+                format="png" (imageCropped)="imageCropped($event)">
+            </image-cropper>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="footer">
+            <div class="example-button-container">
+                <button mat-button mat-dialog-close>Cancel</button>
+                <button mat-fab extended (click)="saveImg()">
+                    <mat-icon>arrow_upward</mat-icon>
+                    Upload
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
